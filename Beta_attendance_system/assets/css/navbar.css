@@ -1,0 +1,100 @@
+:root {
+    --navbar-bg: #ffffff;
+    --navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    --navbar-link: #4b5563;
+    --navbar-hover: #4f46e5;
+    --navbar-active: #4f46e5;
+    --admin-primary: #212529;
+    --teacher-primary: #4f46e5;
+    --dropdown-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.modern-navbar {
+    background-color: var(--navbar-bg);
+    box-shadow: var(--navbar-shadow);
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.modern-navbar .navbar-brand {
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.admin-navbar .navbar-brand {
+    color: var(--admin-primary);
+}
+
+.teacher-navbar .navbar-brand {
+    color: var(--teacher-primary);
+}
+
+.modern-navbar .nav-link {
+    color: var(--navbar-link);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    margin: 0 0.25rem;
+}
+
+.modern-navbar .nav-link:hover {
+    color: var(--navbar-hover);
+    background-color: rgba(79, 70, 229, 0.05);
+}
+
+.modern-navbar .nav-link.active {
+    color: var(--navbar-active);
+    background-color: rgba(79, 70, 229, 0.1);
+}
+
+.admin-navbar .nav-link.active {
+    color: var(--admin-primary);
+    background-color: rgba(33, 37, 41, 0.1);
+}
+
+.modern-navbar .dropdown-menu {
+    border: none;
+    box-shadow: var(--dropdown-shadow);
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+}
+
+.modern-navbar .dropdown-item {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.modern-navbar .dropdown-item:hover {
+    background-color: rgba(79, 70, 229, 0.05);
+}
+
+.admin-navbar .dropdown-item:hover {
+    background-color: rgba(33, 37, 41, 0.05);
+}
+
+@media (max-width: 991.98px) {
+    .modern-navbar .navbar-collapse {
+        padding: 1rem 0;
+    }
+    
+    .modern-navbar .nav-link {
+        margin: 0.25rem 0;
+    }
+    
+    .modern-navbar .dropdown-menu {
+        box-shadow: none;
+        padding: 0;
+        margin: 0.5rem 0;
+    }
+    
+    .modern-navbar .dropdown-item {
+        padding: 0.5rem 1.5rem;
+    }
+}

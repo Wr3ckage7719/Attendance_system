@@ -1,0 +1,136 @@
+#calendar {
+    margin-top: 20px;
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    height: auto;
+    min-height: 400px; /* Even more compact */
+}
+
+.fc {
+    --fc-border-color: #e5e7eb;
+    --fc-button-bg-color: #4f46e5;
+    --fc-button-border-color: #4f46e5;
+    --fc-button-hover-bg-color: #4338ca;
+    --fc-button-hover-border-color: #4338ca;
+    --fc-event-bg-color: #4f46e5;
+    --fc-event-border-color: #4f46e5;
+    --fc-today-bg-color: rgba(79, 70, 229, 0.06);
+    max-width: 100%;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Compact header */
+.fc .fc-toolbar {
+    padding: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.fc .fc-toolbar-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Smaller buttons */
+.fc .fc-button {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.813rem;
+    border-radius: 6px;
+}
+
+/* Compact day cells */
+.fc-daygrid-day {
+    min-height: 60px !important;
+}
+
+.fc-daygrid-day-frame {
+    padding: 2px !important;
+}
+
+.fc-daygrid-day-events {
+    margin: 2px 0 !important;
+}
+
+/* Smaller text for day numbers */
+.fc-daygrid-day-number {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+    color: #4b5563;
+}
+
+/* Compact events */
+.fc-event {
+    padding: 2px 4px;
+    margin: 1px 0;
+    border-radius: 4px;
+    font-size: 0.688rem;
+}
+
+.fc-daygrid-event {
+    padding: 1px 3px;
+}
+
+.fc-daygrid-event .fc-event-title {
+    font-size: 0.688rem;
+}
+
+.fc-daygrid-event .fc-event-time {
+    font-size: 0.625rem;
+}
+
+/* Cleaner borders */
+.fc th {
+    padding: 6px 0;
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+.fc td {
+    border-color: #f3f4f6;
+}
+
+/* More compact week view */
+.fc-timegrid-slot {
+    height: 2rem !important;
+}
+
+.fc-timegrid-slot-label {
+    font-size: 0.688rem;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    #calendar {
+        padding: 8px;
+        margin-top: 12px;
+        min-height: 350px;
+    }
+    
+    .fc .fc-toolbar {
+        gap: 8px;
+    }
+
+    .fc-header-toolbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fc .fc-toolbar-title {
+        font-size: 0.875rem;
+        margin: 4px 0;
+    }
+
+    .fc-toolbar-chunk {
+        display: flex;
+        gap: 4px;
+    }
+
+    .fc .fc-button {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+}

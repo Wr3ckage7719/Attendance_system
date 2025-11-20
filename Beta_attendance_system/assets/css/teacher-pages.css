@@ -1,0 +1,581 @@
+/* Shared styles for teacher pages */
+.page-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1.5rem;
+}
+
+.filter-card {
+    background: white;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    width: 100%;
+}
+
+.filter-card .card-body {
+    padding: 1.5rem 2rem;
+}
+
+.content-card {
+    background: white;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    width: 100%;
+    margin: 0;
+}
+
+.content-card .card-body {
+    padding: 1.5rem 2rem;
+    width: 100%;
+}
+
+/* Table styles */
+.content-card .table-responsive {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+}
+
+.content-card .table {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 0.9375rem;
+}
+
+/* Column width distribution - optimized for wider layout */
+.content-card .table th,
+.content-card .table td {
+    padding: 0.75rem;
+    white-space: nowrap;
+}
+
+.content-card .table th:nth-child(1),
+.content-card .table td:nth-child(1) {
+    width: 20%;  /* Student Name - increased */
+}
+
+.content-card .table th:nth-child(2),
+.content-card .table td:nth-child(2) {
+    width: 18%;  /* Subject - increased */
+}
+
+.content-card .table th:nth-child(3),
+.content-card .table td:nth-child(3) {
+    width: 10%;  /* Block */
+}
+
+.content-card .table th:nth-child(4),
+.content-card .table td:nth-child(4) {
+    width: 15%;  /* Course - increased */
+}
+
+.content-card .table th:nth-child(5),
+.content-card .table td:nth-child(5),
+.content-card .table th:nth-child(6),
+.content-card .table td:nth-child(6) {
+    width: 10%;  /* Present/Total and Late columns */
+}
+
+.content-card .table th:nth-child(7),
+.content-card .table td:nth-child(7) {
+    width: 12%;  /* Attendance Rate */
+}
+
+.content-card .table th:last-child,
+.content-card .table td:last-child {
+    width: 16%;  /* Actions */
+    text-align: left;
+    white-space: nowrap;
+    padding: 0.75rem;
+    min-width: 160px;  /* Ensure minimum width for buttons */
+}
+
+.content-card .table td:last-child .d-flex {
+    display: flex !important;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+}
+
+.content-card .table td:last-child .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+    min-width: 105px;
+    text-align: center;
+}
+
+.content-card .table td:last-child .btn-info {
+    background-color: #0ea5e9;
+    border-color: #0ea5e9;
+    color: white;
+}
+
+.content-card .table td:last-child .btn-warning {
+    background-color: #f59e0b;
+    border-color: #f59e0b;
+    color: white;
+}
+
+.content-card .table td:last-child .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Take Attendance specific styles */
+.attendance-buttons .btn-check + .btn-outline-success:hover,
+.attendance-buttons .btn-check:checked + .btn-outline-success {
+    background-color: #059669;
+    border-color: #059669;
+}
+
+.attendance-buttons .btn-check + .btn-outline-warning:hover,
+.attendance-buttons .btn-check:checked + .btn-outline-warning {
+    background-color: #d97706;
+    border-color: #d97706;
+}
+
+.attendance-buttons .btn-check + .btn-outline-danger:hover,
+.attendance-buttons .btn-check:checked + .btn-outline-danger {
+    background-color: #dc2626;
+    border-color: #dc2626;
+}
+
+.attendance-table th {
+    background-color: #f3f4f6;
+    font-weight: 600;
+    color: #374151;
+}
+
+/* Attendance History specific styles */
+.history-card {
+    transition: transform 0.2s;
+}
+
+.history-card:hover {
+    transform: translateY(-2px);
+}
+
+.status-badge {
+    font-size: 0.8125rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.status-badge.present {
+    background-color: #059669;
+    color: white;
+}
+
+.status-badge.late {
+    background-color: #d97706;
+    color: white;
+}
+
+.status-badge.absent {
+    background-color: #dc2626;
+    color: white;
+}
+
+/* Updated button styles for attendance history */
+.history-action-btn {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.815rem;
+    margin: 0 0.25rem;
+}
+
+.history-action-btn.btn-info {
+    background-color: #0ea5e9;
+    border-color: #0ea5e9;
+    color: white;
+}
+
+.history-action-btn.btn-info:hover {
+    background-color: #0284c7;
+    border-color: #0284c7;
+}
+
+.history-action-btn.btn-warning {
+    background-color: #f59e0b;
+    border-color: #f59e0b;
+    color: white;
+}
+
+.history-action-btn.btn-warning:hover {
+    background-color: #d97706;
+    border-color: #d97706;
+}
+
+/* Ensure buttons are always visible in the attendance history table */
+.d-flex.gap-2 {
+    position: relative;
+    z-index: 1;
+    gap: 0.5rem !important;
+}
+
+.btn-info, .btn-warning {
+    position: relative;
+    z-index: 2;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.table td {
+    position: relative;
+    vertical-align: middle;
+    padding: 0.75rem;
+}
+
+/* Ensure table cells have enough width for buttons */
+.table td:last-child {
+    min-width: 180px;
+    width: auto;
+    max-width: 200px;
+    white-space: normal;
+}
+
+/* Add hover effect to make buttons more visible */
+.btn-info:hover, .btn-warning:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Ensure buttons don't wrap on smaller screens */
+@media (max-width: 768px) {
+    .d-flex.gap-2 {
+        flex-direction: column;
+        gap: 0.5rem !important;
+    }
+    
+    .table td:last-child {
+        min-width: 120px;
+    }
+}
+
+/* Attendance History Table Styles */
+.table.table-sm td, 
+.table.table-sm th {
+    padding: 0.5rem;
+    vertical-align: middle;
+}
+
+.table tbody tr:hover .btn-group {
+    opacity: 1;
+}
+
+.btn-group.btn-group-sm .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.btn-group.btn-group-sm .btn i {
+    font-size: 0.75rem;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-align: center;
+    min-width: 60px;
+}
+
+.status-badge.success {
+    background-color: #10b981;
+    color: white;
+}
+
+.status-badge.warning {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.status-badge.danger {
+    background-color: #ef4444;
+    color: white;
+}
+
+.status-badge.bg-secondary {
+    background-color: #6b7280;
+    color: white;
+}
+
+/* Ensure table responsiveness without horizontal scroll */
+.table-responsive {
+    margin-bottom: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 992px) {
+    .table.table-sm td, 
+    .table.table-sm th {
+        padding: 0.375rem;
+    }
+    
+    .btn-group.btn-group-sm .btn {
+        padding: 0.25rem;
+    }
+    
+    .btn-group.btn-group-sm .btn i {
+        margin: 0;
+    }
+    
+    .btn-group.btn-group-sm .btn span {
+        display: none;
+    }
+}
+
+/* My Classes specific styles */
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+}
+
+.class-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+    background: #ffffff;
+    min-height: 420px;
+}
+
+.class-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.class-card .card-header {
+    background-color: #f8fafc;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    border-radius: 12px 12px 0 0;
+}
+
+.class-card .card-header h5 {
+    color: #1e40af;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.class-card .card-header small {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.class-card .card-body {
+    padding: 1.5rem;
+}
+
+.class-info {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 0;
+}
+
+.class-info:not(:last-child) {
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.class-info strong {
+    color: #374151;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 90px;
+    font-size: 1.1rem;
+}
+
+.class-info span {
+    font-size: 1.1rem;
+}
+
+.time-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #f3f4f6;
+    border-radius: 9999px;
+    font-size: 1rem;
+    color: #4b5563;
+    margin: 0.35rem 0;
+    font-weight: 500;
+}
+
+.stats-badge {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 500;
+}
+
+.class-action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.class-action-buttons .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.class-action-buttons .btn-success {
+    background-color: #059669;
+    border-color: #059669;
+}
+
+.class-action-buttons .btn-success:hover {
+    background-color: #047857;
+    border-color: #047857;
+}
+
+.class-action-buttons .btn-primary {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+}
+
+.class-action-buttons .btn-primary:hover {
+    background-color: #4338ca;
+    border-color: #4338ca;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .class-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .filter-card .row {
+        row-gap: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .class-card {
+        min-height: auto;
+    }
+}
+
+/* Settings page specific styles */
+.profile-info {
+    padding: 0.5rem;
+}
+
+.info-item {
+    padding: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item strong {
+    color: #374151;
+    font-weight: 600;
+    min-width: 100px;
+}
+
+.info-item span {
+    color: #1f2937;
+    font-size: 1rem;
+}
+
+.content-card .card-title {
+    color: #1e40af;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.content-card .form-label {
+    color: #374151;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.content-card .form-control {
+    border-radius: 8px;
+    padding: 0.625rem 1rem;
+    border-color: #e5e7eb;
+    transition: all 0.2s;
+}
+
+.content-card .form-control:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.content-card .btn-primary {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+    padding: 0.625rem 1.5rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.content-card .btn-primary:hover {
+    background-color: #4338ca;
+    border-color: #4338ca;
+    transform: translateY(-1px);
+}
+
+.content-card .form-text {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* Improve button icon alignment and spacing */
+.action-buttons-container {
+    display: flex;
+    gap: 4px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.action-buttons-container .btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8125rem;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    min-width: auto;
+}
+
+.action-buttons-container .btn i {
+    margin-right: 3px;
+    font-size: 0.8125em;
+}
+
+.action-buttons-container .btn-info i {
+    color: white;
+}
+
+.action-buttons-container .btn-warning i {
+    color: white;
+}
